@@ -67,12 +67,32 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CauChao.aspx" />
+    <Content Include="css\main.css" />
+    <Content Include="Diadanhdulich.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="images\logo-bao-tuoitre.png" />
+    <Content Include="images\user-icon.png" />
     <Content Include="index.aspx" />
     <Content Include="TinhToan.aspx" />
     <Content Include="Web.config" />
+    <Content Include="webcontrol.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CauChao.aspx.cs">
+      <DependentUpon>CauChao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CauChao.aspx.designer.cs">
+      <DependentUpon>CauChao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Diadanhdulich.aspx.cs">
+      <DependentUpon>Diadanhdulich.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Diadanhdulich.aspx.designer.cs">
+      <DependentUpon>Diadanhdulich.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -90,6 +110,13 @@
     </Compile>
     <Compile Include="TinhToan.aspx.designer.cs">
       <DependentUpon>TinhToan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="webcontrol.aspx.cs">
+      <DependentUpon>webcontrol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="webcontrol.aspx.designer.cs">
+      <DependentUpon>webcontrol.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

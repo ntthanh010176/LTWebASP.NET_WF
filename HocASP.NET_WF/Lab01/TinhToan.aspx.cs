@@ -55,5 +55,12 @@ namespace Lab01
             //gui ket qua ve client
             txtKetQua.Text = kq.ToString();
         }
+        protected void btClear_Click(object sender, EventArgs e)
+        {
+            txtSo1.Text = "";
+            txtSo2.Text = "";
+            txtKetQua.Text = "";
+            txtSo1.Focus();
+        }
     }
 }

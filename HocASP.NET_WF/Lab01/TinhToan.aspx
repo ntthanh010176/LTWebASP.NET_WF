@@ -50,7 +50,7 @@
                         <asp:Button ID="btTru" runat="server" Text="Trừ" OnClick="btTru_Click" />
                         <asp:Button ID="btNhan" runat="server" Text="Nhân" OnClick="btNhan_Click" />
                         <asp:Button ID="btChia" runat="server" Text="Chia" OnClick="btChia_Click" />
-                        <asp:Button ID="btClear" runat="server" Text="Clear" />
+                        <asp:Button ID="btClear" runat="server" Text="Clear" OnClick="btClear_Click" />
                     </td>
                 </tr>
                 <tr>

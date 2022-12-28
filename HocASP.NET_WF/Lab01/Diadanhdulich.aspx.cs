@@ -40,6 +40,7 @@ namespace Lab01
             kq += "</ul>";
             //gủi kết quả về client
             lbDiadanh.Text = kq;
+
             
         }
     }

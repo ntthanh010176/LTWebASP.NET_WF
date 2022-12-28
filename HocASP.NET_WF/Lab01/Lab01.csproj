@@ -70,10 +70,13 @@
     <Content Include="CauChao.aspx" />
     <Content Include="css\main.css" />
     <Content Include="Diadanhdulich.aspx" />
+    <Content Include="Dondathang.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="images\delete.jpg" />
     <Content Include="images\logo-bao-tuoitre.png" />
     <Content Include="images\user-icon.png" />
     <Content Include="index.aspx" />
+    <Content Include="Thongtincanhan.aspx" />
     <Content Include="TinhToan.aspx" />
     <Content Include="Web.config" />
     <Content Include="webcontrol.aspx" />
@@ -93,6 +96,13 @@
     <Compile Include="Diadanhdulich.aspx.designer.cs">
       <DependentUpon>Diadanhdulich.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Dondathang.aspx.cs">
+      <DependentUpon>Dondathang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dondathang.aspx.designer.cs">
+      <DependentUpon>Dondathang.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -104,6 +114,13 @@
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Thongtincanhan.aspx.cs">
+      <DependentUpon>Thongtincanhan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Thongtincanhan.aspx.designer.cs">
+      <DependentUpon>Thongtincanhan.aspx</DependentUpon>
+    </Compile>
     <Compile Include="TinhToan.aspx.cs">
       <DependentUpon>TinhToan.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

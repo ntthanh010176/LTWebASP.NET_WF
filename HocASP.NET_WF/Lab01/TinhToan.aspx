@@ -34,7 +34,7 @@
                 <tr>
                     <td class="auto-style3">Nhập số thứ 1</td>
                     <td>
-                        <asp:TextBox ID="txtSo1" runat="server" ></asp:TextBox>
+                        <asp:TextBox ID="txtSo1" runat="server" ></asp:TextBox>                       
                     </td>
                 </tr>
                 <tr>

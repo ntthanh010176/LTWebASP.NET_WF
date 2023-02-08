@@ -77,10 +77,16 @@
     <Content Include="images\user-icon.png" />
     <Content Include="index.aspx" />
     <Content Include="Lich.aspx" />
+    <Content Include="Panels.aspx" />
     <Content Include="Thongtincanhan.aspx" />
     <Content Include="TinhToan.aspx" />
+    <Content Include="UploadFile.aspx" />
+    <Content Include="Uploads\004.jpeg" />
+    <Content Include="Uploads\011.jpeg" />
+    <Content Include="ViewUpload.aspx" />
     <Content Include="Web.config" />
     <Content Include="webcontrol.aspx" />
+    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CauChao.aspx.cs">
@@ -121,6 +127,13 @@
     <Compile Include="Lich.aspx.designer.cs">
       <DependentUpon>Lich.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Panels.aspx.cs">
+      <DependentUpon>Panels.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Panels.aspx.designer.cs">
+      <DependentUpon>Panels.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Thongtincanhan.aspx.cs">
       <DependentUpon>Thongtincanhan.aspx</DependentUpon>
@@ -136,6 +149,20 @@
     <Compile Include="TinhToan.aspx.designer.cs">
       <DependentUpon>TinhToan.aspx</DependentUpon>
     </Compile>
+    <Compile Include="UploadFile.aspx.cs">
+      <DependentUpon>UploadFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UploadFile.aspx.designer.cs">
+      <DependentUpon>UploadFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewUpload.aspx.cs">
+      <DependentUpon>ViewUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewUpload.aspx.designer.cs">
+      <DependentUpon>ViewUpload.aspx</DependentUpon>
+    </Compile>
     <Compile Include="webcontrol.aspx.cs">
       <DependentUpon>webcontrol.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -143,9 +170,17 @@
     <Compile Include="webcontrol.aspx.designer.cs">
       <DependentUpon>webcontrol.aspx</DependentUpon>
     </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="Uploads\OnTapCSDL_C20.pdf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

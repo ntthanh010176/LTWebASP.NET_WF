@@ -22,8 +22,34 @@ namespace Lab01
             }
 
             lbLoi.Text = "";
+            //tim kiem de kiem tra ton tai
+            int findIndex = TimKiem(ddlBanh.SelectedItem.Text);
             //thêm tên bánh và số lượng đặt vào lstBanh
-            lstBanh.Items.Add(ddlBanh.SelectedItem.Text + "(" + txtSoluong.Text + ")");
+            if (findIndex == -1) //banh can them khong ton tai trong lstBanh
+                lstBanh.Items.Add(ddlBanh.SelectedItem.Text + "(" + txtSoluong.Text + ")");
+            else { //ton tai
+                //cat chuoi de tach ten banh va so luong
+                string[] strArr = lstBanh.Items[findIndex].Text.Split(new char[] { '(', ')' });
+                //cong don so luong
+                int soluong = int.Parse(strArr[1]) + int.Parse(txtSoluong.Text);
+                //gán lại giá trị cho phan tu vi tri findIndex cua lstBanh
+                lstBanh.Items[findIndex].Text = ddlBanh.SelectedItem.Text + "(" + soluong + ")";
+            }
+        }
+
+        private int TimKiem(string tenbanh)
+        {
+            int chiso = -1; //chi so tim kiem
+            //duyet cac phan tu trong lstBanh
+            for (int i = 0; i < lstBanh.Items.Count; i++)
+            {
+                if (lstBanh.Items[i].Text.StartsWith(tenbanh))
+                {
+                    chiso = i;
+                    break;
+                }
+            }
+            return chiso;
         }
 
         protected void btXoa_Click(object sender, ImageClickEventArgs e)
@@ -43,9 +69,25 @@ namespace Lab01
         protected void btInhoadon_Click(object sender, EventArgs e)
         {
             //b1. thu thap thong tin don hang tu client
-            // tu code...
+            string ketqua = "";
+            ketqua += "<h2 align='center'>HOÁ ĐƠN ĐẶT HÀNG </h2>";
+            //lấy thông tin khách hàng
+            ketqua += "<div style='border:1px solid red;padding:10px'>";
+            ketqua += "Khách hàng :<i>" + txtHoten.Text + "</i><br>";
+            ketqua += "Địa chỉ :<i>" + txtDiachi.Text + "</i><br>";
+            ketqua += "Mã số thuế :<i>" + txtMST.Text + "</i><br>";
+            //lấy thông tin bánh đặt
+            ketqua += "Đặt các loại bánh sau: <br>";
+            ketqua += "<table border=1 width=100%>";
+            char[] strSep = { '(', ')' };
+            foreach (ListItem x in lstBanh.Items)
+            {
+                string[] strArr = x.Text.Split(strSep);
+                ketqua += string.Format("<tr><td>{0}</td><td>{1}</td></tr>", strArr[0], strArr[1]);                
+            }
+            ketqua += "<table></div>";
             //b2. gui thong tin don hang cho client
-            // tu code...
+            lbThongtin.Text = ketqua;
         }
     }
 }

@@ -76,6 +76,7 @@
     <Content Include="images\logo-bao-tuoitre.png" />
     <Content Include="images\user-icon.png" />
     <Content Include="index.aspx" />
+    <Content Include="Lich.aspx" />
     <Content Include="Thongtincanhan.aspx" />
     <Content Include="TinhToan.aspx" />
     <Content Include="Web.config" />
@@ -112,6 +113,13 @@
     </Compile>
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Lich.aspx.cs">
+      <DependentUpon>Lich.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Lich.aspx.designer.cs">
+      <DependentUpon>Lich.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Thongtincanhan.aspx.cs">

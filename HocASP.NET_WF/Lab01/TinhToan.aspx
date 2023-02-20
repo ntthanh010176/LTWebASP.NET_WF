@@ -59,6 +59,12 @@
                         <asp:TextBox ID="txtKetQua" runat="server" ReadOnly="true" ></asp:TextBox>
                     </td>
                 </tr>
+                <tr>
+                    <td class="auto-style3">&nbsp;</td>
+                    <td>
+                        <asp:Label ID="lbLoi" runat="server" Text="" ForeColor="#ff0000"></asp:Label>
+                    </td>
+                </tr>
             </table>
 
         </div>

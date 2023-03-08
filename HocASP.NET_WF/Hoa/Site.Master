@@ -1,0 +1,109 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Hoa.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - My ASP.NET Application</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+       
+
+   <div id="header">
+    <div class="wrapper clearfix">
+        <div class="logo">
+            <a href='/' title='Shop hoa yêu thương' ><img src='/images/logo-hoa-yeu-thuong.png'/></a>
+        </div>
+        <div class="search">
+            <input id="txtSearch" type="text" placeholder="Tìm sản phẩm" onkeypress="txtSearchKeyUp()" />
+            <a href="javascript:void(0);" onclick="SearchItem();" class="btnsearch">Tìm kiếm</a>
+            <a href="tel:02873002010" class="support">
+                <strong>Hotline Miền Nam</strong>
+                <span>028 73002010</span>
+            </a>
+            <a href="tel:02873002010" class="support">
+                <strong>Hotline Miền Bắc</strong>
+                <span>024 73002010</span>
+            </a>
+            <a href="javascript:void(0);" class="support zaloOA" onclick="ShowZalo(this);">
+                <img src="/images/zalo-chat-icon.png" />
+            </a>
+            <div class="zalo-oa">
+                <script src="https://sp.zalo.me/plugins/sdk.js"></script>
+                <div class="zalo-follow-button" data-oaid="1438598198492740243" data-cover="no" data-article="3" data-width="195" data-height="365"></div>
+                <a href="javascript:void(0);" class="close-zalo" onclick="$('.zalo-oa').toggle();">X</a>
+            </div>
+        </div>
+        <div class="cart">
+            <a id='shopping-cart' href='javascript:void(0);'><img src="/images/shopping-bag.png"/><strong>Giỏ hàng</strong></a>
+        </div>
+        <div class="my-account">
+            <img id="ctl00_ucHeader_imgUser" src="/images/user.png" style="border-width:0px;" />
+            <a id="ctl00_ucHeader_hplMyAccount" title="Tài khoản" href="/account/account.aspx?lang=vn">Tài khoản</a>
+            <div id="ctl00_ucHeader_pnlSignin" class="signin-dropdown">
+	
+                <a href='/account/account.aspx?lang=vn' title='Sign in' class='sign-in'>Sign in</a>
+                <div class="dac">
+                    <strong>Bạn chưa chưa có tài khoản?</strong>
+                    <a href='/account/account.aspx?lang=vn' title='Nhấn vào đây' class='register'>Nhấn vào đây</a>
+                </div>
+                <a href="javascript:void(0);" class="login-fb" onclick="LoginFB()" style="display:none;">Login with Facebook</a>
+                <a href="javascript:void(0);" id="btnSignInGG" class="login-gg">Sign in with Google</a>
+                <a href="/account/forgot.aspx?lang=vn">Quên mật khẩu</a>
+                <div class="npf">
+                    <strong>Lợi ích khi đăng ký</strong>
+                    <ul>
+                        <li>Được giảm giá từ 3-10%</li>
+                        <li>Nhận được các chương trình khuyến mãi</li>
+                    </ul>
+                </div>
+            
+   </div>
+
+   </div>
+        
+        
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+            <footer>
+                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+            </footer>
+        </div>
+        </div>
+       </div>
+    </form>
+</body>
+</html>

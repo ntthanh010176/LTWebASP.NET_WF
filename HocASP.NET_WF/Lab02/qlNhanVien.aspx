@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title></title>    
 </head>
 <body>
     <form id="form1" runat="server">
@@ -40,11 +40,30 @@
                     <asp:BoundField HeaderText="Mã nhân viên" ReadOnly="true" DataField="MaNV" />
                     <asp:BoundField HeaderText="Họ nhân viên" DataField="HoNV" />
                     <asp:BoundField HeaderText="Tên nhân viên" DataField="tenNV" />
-                    <asp:CheckBoxField HeaderText="Phái" DataField="Phai" />
+                    <asp:TemplateField HeaderText="Phái">
+                        <ItemTemplate>
+                            <asp:Label ID="lbPhai" runat="server" Text='<%# (bool)Eval("Phai")==true?"Nam":"Nữ" %>'>
+                            </asp:Label>
+                        </ItemTemplate>
+                        <EditItemTemplate>
+                            <asp:DropDownList ID="ddlPhai" runat="server" SelectedValue='<%# Bind("Phai") %>'>
+                                <asp:ListItem Value="True">Nam</asp:ListItem>
+                                <asp:ListItem Value="False">Nữ</asp:ListItem>
+                            </asp:DropDownList>
+                        </EditItemTemplate>
+                    </asp:TemplateField>
                     <asp:BoundField HeaderText="Ngày sinh" DataField="Ngaysinh" DataFormatString="{0: dd/MM/yyyy}" />
                     <asp:BoundField DataField="NoiSinh" HeaderText="Nơi sinh"  />
                     <asp:BoundField DataField="MaPhong" HeaderText="Mã phòng" />
-                    <asp:CommandField ShowEditButton="true" ButtonType="Button" ShowDeleteButton="true" />  
+                    <asp:CommandField ShowEditButton="true" ButtonType="Button" EditText="Sửa" UpdateText="Lưu" CancelText="Bỏ qua" />  
+                    <asp:TemplateField HeaderText="Tác vụ">
+                        <ItemTemplate>
+                            <asp:Button ID="btXoa" runat="server" 
+                                 OnClientClick="return confirm('Bạn có chắc xoá nhân viên?')"
+                                 CommandName="Delete" Text="Xoá" />
+                        </ItemTemplate>  
+                        <EditItemTemplate></EditItemTemplate>
+                    </asp:TemplateField>
                 </Columns>              
                 <EditRowStyle BackColor="#999999" />
                 <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
